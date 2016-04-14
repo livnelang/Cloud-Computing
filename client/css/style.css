@@ -1,0 +1,35 @@
+html, body, .ng-scope {
+    height: 100%;
+}
+
+.wrapper {
+    height:auto;
+    width:auto;
+}
+
+/**
+* Gallery Aside
+*/
+.main-sidebar {
+    display: block;
+    position: relative;
+    float:left;
+    width:30%;
+    height:100%;
+    background: #63B4CF;
+}
+
+.person_face {
+    padding-top: 20%;
+    display: block;
+    margin: 0px auto;
+    height:20%;
+}
+
+.person_face img {
+    border-radius: 50%;
+    width: 50%;
+    border: 2px solid grey;
+    display: block;
+    margin: 0px auto;
+}
