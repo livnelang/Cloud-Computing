@@ -1,0 +1,85 @@
+html,
+body,
+.ng-scope {
+  height: 100%;
+}
+/**
+* Mixins
+*/
+.centered-element {
+  display: block;
+  margin: 0px auto;
+}
+.wrapper {
+  height: auto;
+  width: auto;
+}
+/**
+* Gallery Aside
+*/
+.main-sidebar {
+  display: block;
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 100%;
+  background: #63B4CF;
+}
+.person_face {
+  padding-top: 12%;
+  display: block;
+  margin: 0px auto;
+}
+.person_face img {
+  border-radius: 50%;
+  width: 50%;
+  border: 2px solid grey;
+  display: block;
+  margin: 0px auto;
+}
+.person_face p {
+  text-align: center;
+  color: blue;
+  font-family: sans-serif;
+}
+.sidebar {
+  padding-top: 20px;
+}
+.sidebar h2 {
+  text-align: center;
+}
+.sidebar ul {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0px;
+}
+.sidebar ul li {
+  text-align: center;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+/**
+* Main
+*/
+/**
+* Gallery Header
+*/
+main {
+  float: left;
+  width: 80%;
+}
+/**
+* Gallery Header
+*/
+header {
+  width: 100%;
+}
+header h1 {
+  text-align: center;
+  font-family: serif;
+}
+.gallery-container {
+  width: 90%;
+  display: block;
+  margin: 0px auto;
+}

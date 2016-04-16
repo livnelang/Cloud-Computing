@@ -3,11 +3,11 @@
  * Header
  *
  ******************************/
-app.directive('adminHeader',function(){
+app.directive('galleryHeader',function(){
     return {
         restrict: 'E',
         replace: true,
-        templateUrl: 'templates/admin-header.html',
+        templateUrl: 'templates/gallery-header.html',
     };
 });
 
@@ -35,11 +35,11 @@ app.directive('gallerySidebar',function(){
  * Content
  *
  ******************************/
-app.directive('adminContent',function(){
+app.directive('galleryContent',function(){
     return {
         restrict: 'E',
         replace: true,
-        templateUrl: 'templates/admin-content.html',
+        templateUrl: 'templates/gallery-content.html',
         compile: function(tElem,attrs) {
             return function(scope,elem,attrs) {
 
