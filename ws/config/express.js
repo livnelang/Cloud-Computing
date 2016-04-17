@@ -11,7 +11,7 @@ module.exports = function() {
     //configure body parser
     app.set('json spaces',4);
 
-    //add access control response
+    //Add the Access Control (CORS)
     app.use(function(req, res, next) {
         res.header('Access-Control-Allow-Origin', '*');
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -23,10 +23,7 @@ module.exports = function() {
 
 
     // Load the routing files
-    //require('../app/routes/teachers.routes.js')(app);
-    //require('../app/routes/students.routes.js')(app);
-    //require('../app/routes/images.routes.js')(app);
-    //require('../app/routes/courses.routes.js')(app);
+    require('../app/routes/pictures.routes')(app);
 
     //Return the Express application instance
     return app;
