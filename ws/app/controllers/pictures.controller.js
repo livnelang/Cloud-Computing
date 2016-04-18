@@ -106,7 +106,6 @@ var pictures = {
                     });
                 }
                 else {
-                    console.log('data: ' + data);
                     // Send a JSON representation of the ingredients
                     res.status(200).json(data);
                 }
