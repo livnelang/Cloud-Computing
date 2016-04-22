@@ -1,28 +1,10 @@
-app.controller('galleryCtrl',['$scope','categoriesFactory', function ($scope, categoriesFactory) {
- var catgs = ['sports', 'nature','music', 'cartoons'];
- console.log('hi gallery cloud panel ..');
- //$scope.items = categoriesFactory.items;
+app.controller('galleryCtrl',['$scope','$stateParams','categoriesFactory', function ($scope, $stateParams, categoriesFactory) {
+    var cat = $stateParams['cat'];
+    $scope.pictures = categoriesFactory.pictures[cat];
 
- categoriesFactory.getPictures().then(function(data)  {
-  console.log('data is here');
-  $scope.items = data.data;
-  $scope.setCategories();
- });
-
-
- /**
-  * Set Pictures categories
-  */
- $scope.setCategories = function() {
-  for (var name in catgs) {
-    for (var item in $scope.items) {
-     if (name == item['_id']) {
-       console.log('match');
-     }
-    }
-   }
- }
-
-
+    $scope.name = "asdasdsa";
+    angular.forEach($scope.pictures, function(p) {
+        console.log('src: ' + p.src);
+    });
 }]) ;
 

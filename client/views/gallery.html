@@ -1,15 +1,10 @@
-<!--Wrapper -->
+<div class="gallery-container">
+        <div ng-if="pictures" class="gallery-container">
 
-
-        <!--Sidebar -->
-        <gallery-sidebar></gallery-sidebar>
-        <!--Main -->
-        <main>
-                <gallery-header></gallery-header>
-                <!--Content-->
-                <gallery-content></gallery-content>
-        </main>
-
-
-        <!--&lt;!&ndash;Footer&ndash;&gt;-->
-        <!--<admin-footer></admin-footer>-->
+                <div ng-repeat="picture in pictures" class="col-xs-6 col-md-2">
+                        <a href="#" class="thumbnail">
+                                <img ng-src={{picture.src}}>
+                        </a>
+                </div>
+        </div>
+</div>
