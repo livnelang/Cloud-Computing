@@ -18,12 +18,17 @@ body,
 * Gallery Aside
 */
 .main-sidebar {
+  background: #000;
   display: block;
   position: relative;
   float: left;
   width: 20%;
   height: 100%;
-  background: #63B4CF;
+}
+@media screen and (max-width: 767px) {
+  .main-sidebar {
+    display: none;
+  }
 }
 .person_face {
   padding-top: 12%;
@@ -42,6 +47,9 @@ body,
   color: blue;
   font-family: sans-serif;
 }
+/*
+* Sidebar
+*/
 .sidebar {
   padding-top: 20px;
 }
@@ -58,11 +66,12 @@ body,
   padding-bottom: 15px;
   cursor: pointer;
 }
+#menu-toggle {
+  float: left;
+  margin-left: 5%;
+}
 /**
 * Main
-*/
-/**
-* Gallery Header
 */
 main {
   float: left;
@@ -73,6 +82,9 @@ main {
 */
 header {
   width: 100%;
+}
+header .page-header {
+  margin: 0px;
 }
 header h1 {
   text-align: center;

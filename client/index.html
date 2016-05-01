@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <title>Cloud Gallery</title>
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/simple-sidebar.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+
 
     <!-- Bower Components -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -18,19 +21,24 @@
     <script src="js/factories/categories.factory.js"></script>
     <script src="js/controllers/gallery.controller.js"></script>
 
-
 </head>
 <body ng-app="app" ng-controller="mainController">
-    <!--Sidebar -->
-    <gallery-sidebar></gallery-sidebar>
-    <!--Main -->
+
+<div id="wrapper">
+        <!--Header -->
         <gallery-header></gallery-header>
+
+
+        <!--Sidebar -->
+        <gallery-sidebar></gallery-sidebar>
+        <!--Main -->
 
 
     <!--Injected Pages-->
     <div ui-view>
 
     </div>
+</div>
 
 </body>
 </html>

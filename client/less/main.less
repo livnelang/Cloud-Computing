@@ -19,12 +19,15 @@ html, body, .ng-scope {
 * Gallery Aside
 */
 .main-sidebar {
+  background: #000;
   display: block;
   position: relative;
   float:left;
   width:20%;
   height:100%;
-  background: #63B4CF;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .person_face {
@@ -46,6 +49,9 @@ html, body, .ng-scope {
 
 }
 
+/*
+* Sidebar
+*/
 .sidebar {
   padding-top: 20px;
 
@@ -64,15 +70,13 @@ html, body, .ng-scope {
   }
 }
 
+#menu-toggle {
+  float:left;
+  margin-left: 5%;
+}
+
 /**
 * Main
-*/
-
-
-
-
-/**
-* Gallery Header
 */
 main {
   float:left;
@@ -84,6 +88,9 @@ main {
 */
 header {
   width: 100%;
+  .page-header {
+    margin:0px;
+  }
 
   h1 {
     text-align: center;

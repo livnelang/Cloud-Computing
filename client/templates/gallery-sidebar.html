@@ -1,16 +1,28 @@
-<div class="main-sidebar">
-    <div class="person_face">
-        <img src = "../img/bower_face.png" class = "img-circle">
-    </div>
+<!--<div class="main-sidebar">-->
+    <!--<div class="person_face">-->
+        <!--<img src = "../img/bower_face.png" class = "img-circle">-->
+    <!--</div>-->
 
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <h2>categories</h2>
-            <ul>
-                <li ui-sref="gallery({cat: 'sports'})" ui-sref-opts="{reload: true}">Sports</li>
-                <li ui-sref="gallery({cat: 'music'})" ui-sref-opts="{reload: true}">Music</li>
-                <li ui-sref="gallery({cat: 'nature'})" ui-sref-opts="{reload: true}">Nature</li>
-                <li ui-sref="gallery({cat: 'cartoons'})" ui-sref-opts="{reload: true}">Cartoons</li>
-            </ul>
-        </section>
+        <!--&lt;!&ndash; sidebar: style can be found in sidebar.less &ndash;&gt;-->
+        <!--<section class="sidebar">-->
+            <!--<h2>categories</h2>-->
+            <!--<ul>-->
+
+            <!--</ul>-->
+        <!--</section>-->
+<!--</div>-->
+
+
+<!-- Sidebar -->
+<div class="main-sidebar">
+    <aside id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li ui-sref="home" class="sidebar-brand">Home</li>
+            <li ui-sref="gallery({cat: 'sports'})" ui-sref-opts="{reload: true}">Sports</li>
+            <li ui-sref="gallery({cat: 'music'})" ui-sref-opts="{reload: true}">Music</li>
+            <li ui-sref="gallery({cat: 'nature'})" ui-sref-opts="{reload: true}">Nature</li>
+            <li ui-sref="gallery({cat: 'cartoons'})" ui-sref-opts="{reload: true}">Cartoons</li>
+        </ul>
+    </aside>
 </div>
+<!-- /#sidebar-wrapper -->

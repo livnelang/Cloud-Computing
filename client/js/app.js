@@ -63,5 +63,10 @@ app.controller('mainController',['$scope','$location','categoriesFactory','$stat
         console.log('current location: ' + $location.path());
         $location.path( "gallery" );
         //$state.go($state.current);
+    };
+
+
+    $scope.toggleMenu = function() {
+        $(".main-sidebar").toggleClass("expand");
     }
 }]) ;

@@ -20,7 +20,7 @@ app.directive('galleryHeader',function(){
 app.directive('gallerySidebar',function(){
     return {
         restrict: 'E',
-        replace: true,
+        //replace: true,
         templateUrl: 'templates/gallery-sidebar.html',
         compile: function(tElem,attrs) {
             return function(scope,elem,attrs) {
@@ -29,6 +29,7 @@ app.directive('gallerySidebar',function(){
         }
     };
 });
+
 
 /******************************
  *
