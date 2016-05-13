@@ -1,16 +1,35 @@
-var gulp = require('gulp');
+/**
+ * Load Gulp Dependencies
+ * @type {Gulp|exports|module.exports}
+ */
+var gulp = require('gulp'),
+    less = require('gulp-less'),
+    watch = require('gulp-watch'),
+    concat = require('gulp-concat');
 
-//include plugins
-var less = require('gulp-less'),
-    watch = require('gulp-watch');
-
+/**
+ * Compiles .less files into css
+ */
 gulp.task('less', function() {
     gulp.src('less/*.less')
         .pipe(less())
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('css'));
+
 });
 
+/**
+ * Concats .css files into one file
+ */
+gulp.task('concat', function() {
+    return gulp.src('css/*.css')
+        .pipe(concat('all.css'))
+        .pipe(gulp.dest('css'));
+});
 
+/**
+ * Watch task, looks for real time updated less files & saves them
+ */
 gulp.task('watch', function() {
-    gulp.watch('less/*.less', ['less']);
+    gulp.watch('less/*.less', ['concat', 'less']);
 });
+

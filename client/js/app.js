@@ -10,13 +10,11 @@ app.config(function($stateProvider, $urlRouterProvider)  {
             templateUrl: '../views/gallery.html',
             controller: 'galleryCtrl'
         })
-
         .state('home', {
             url: '/home',
             templateUrl: '../views/home.html',
             controller: ''
         });
-
 });
 
 /**
@@ -62,7 +60,6 @@ app.controller('mainController',['$scope','$location','categoriesFactory','$stat
         categoriesFactory.currentPictures = $scope.pictures[cat];
         console.log('current location: ' + $location.path());
         $location.path( "gallery" );
-        //$state.go($state.current);
     };
 
 
