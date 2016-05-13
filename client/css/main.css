@@ -96,3 +96,11 @@ header h1 {
   display: block;
   margin: 0px auto;
 }
+
+.gallery-container a {
+  pointer-events: none;
+  cursor: none;
+}
+.gallery-container .picture-frame {
+  cursor: pointer;
+}

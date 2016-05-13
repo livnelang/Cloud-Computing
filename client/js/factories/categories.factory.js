@@ -9,14 +9,20 @@ app.factory('categoriesFactory', function($http, $q) {
     });
 
 
-
+    /**
+    * Get All pictures from API divided by their categories
+    */
     _prodFactory.getPictures = function() {
         return $http.post(url + 'api/picture/picturesByCategory');
-            //return response.data;
+    };
 
+    /**
+    * Sets the current editable picturem for picturePanel UI Page
+    */
+    _prodFactory.setEditPicture = function() {
+        return $http.post(url + 'api/picture/picturesByCategory');
     };
 
 
-    //console.log(_prodFactory.getProducts());
     return _prodFactory;
 });

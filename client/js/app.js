@@ -14,8 +14,14 @@ app.config(function($stateProvider, $urlRouterProvider)  {
             url: '/home',
             templateUrl: '../views/home.html',
             controller: ''
+        })
+        .state('picturePanel', {
+            url: '/picturePanel',
+            templateUrl: '../views/picturePanel.html',
+            controller: 'picturePanelCtrl'
         });
 });
+
 
 /**
  * app mainController
