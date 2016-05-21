@@ -1,22 +1,17 @@
 // Load the module dependencies
 var mongoose = require('./config/mongoose'),
     express = require('./config/express'),
-    AWS = require('aws-sdk');
+    AWS = require('./config/aws');
 
-//config aws module credentials
-AWS.config.loadFromPath('C:/Users/Livne/.aws/config.json');
-AWS.config.update({region: 'eu-central-1'});
-
-var s3 = new AWS.S3();
-
-
-//console.dir(s3);
 
 // Create a new Mongoose connection instance
 var db = mongoose();
 
 // Create a new Express application instance
 var app = express();
+
+// Create a new s3 bucket service instance
+var s3 = AWS();
 
 //Test AWS Upload
 app.get('/testAWS/:filename/:text', function(req, res) {
@@ -26,10 +21,6 @@ app.get('/testAWS/:filename/:text', function(req, res) {
     console.log('filename: ' + filename);
     console.log('text: ' + text);
 
-    //s3.client.listBuckets().done(function(response) {
-    //    console.log(response.data);
-    //});
-
 
     s3.putObject({
         Bucket: 'livnepictures',
@@ -37,7 +28,12 @@ app.get('/testAWS/:filename/:text', function(req, res) {
         Body: text
     }, function (err) {
         if (err) { throw err; }
-        else {console.log('yes !');}
+        else {
+            console.log('yes !');
+            res.json({
+                msg: "success"
+            })
+        }
     });
 });
 
