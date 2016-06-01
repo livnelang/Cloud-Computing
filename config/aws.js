@@ -11,5 +11,6 @@ module.exports = function() {
     var s3 = new AWS.S3();
 
     // return it to server.js
+    console.log('aws.js');
     return s3;
 };

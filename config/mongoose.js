@@ -8,7 +8,7 @@ mongoose.connection.on("error", function(err) {
 });
 
 mongoose.connection.on("connected", function(ref) {
-    console.log("Connected to " + ref + " DB!");
+    console.log("Connected to " + "cloud_compute" + " DB!");
 });
 
 // Define the Mongoose configuration

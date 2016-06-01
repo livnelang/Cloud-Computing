@@ -3,9 +3,9 @@ var mongoose = require('mongoose'), Schema = mongoose.Schema;
 
 // Define a new 'pictureSchema'
 var pictureSchema = new Schema({
-    name: String,
-    src: String,
-    category: String
+    creator: String,
+    title: String,
+    src: String
 },{collection: 'pictures'});
 
 // Create the model of the 'pictureSchema'
