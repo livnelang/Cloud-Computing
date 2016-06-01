@@ -123,6 +123,21 @@ var pictures = {
      */
     create: function(req, res) {
         console.log('inside pictures create');
+        var fs = require('fs');
+        var upload_pass = JSON.parse(fs.readFileSync('../.redis/upload_pass.json', 'utf8'));
+        // console.log('upload pass: ' + upload_pass);
+        // res.json(upload_pass);
+
+
+        // if user upload password is different from
+        // local password, response bad auth to ui
+        if(!(upload_pass.pass == req.body.password)) {
+            return res.json({
+                status: 'not equal'
+            })
+        }
+
+
 
         // deletes base64 line, before decoding
         var buf = new Buffer(req.body.file.replace(/^data:image\/\w+;base64,/, ""), 'base64'); // Ta-da
